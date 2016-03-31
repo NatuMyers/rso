@@ -1,0 +1,57 @@
+﻿
+
+<h1 class="header  white-text  thin">Yo, {{vm.user.fname}}!</h1>
+
+
+<p><a href="#/collab" class="btn btn-primary col-s6">Make Collab</a></p>
+
+
+<br></br><br></br>
+
+
+
+<div class = "row">
+
+
+
+
+<div class ="col s6">
+
+
+<h4  class="header  white-text  thin">Latest registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+
+    <div class = "white-text light">    {{user.username}} ({{user.fname}} {{user.lname}}) </div>
+         <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+
+</div>
+
+
+
+
+<div class = "col s6">
+
+<h4  class="header  white-text  thin">All Collabs:</h3>
+<ul>
+    <li ng-repeat="collab in vm.allCollabs">
+
+    <div class = "white-text light">    {{collab.collabname}}  </div>
+         <a href="#" ng-click="vm.deleteCollab(collab.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+
+
+<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+
+</div>
+
+
+
+
+
+</div>
